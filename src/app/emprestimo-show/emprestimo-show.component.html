@@ -1,0 +1,41 @@
+<h1>Empréstimo disponíveis</h1>
+<div class="container">
+    <form #emprestimoForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="nome">{{modalidadeDTO.cliente}}</div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>Tipos de Empéstimo</th>
+                                <th>Taxa (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let mod of modalidadeDTO.modalidades">
+                                <td>{{mod.descricao}}</td>
+                                <td id="taxa">{{mod.taxa}} %</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" align="center">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-secondary btn-lg" routerLink="/">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

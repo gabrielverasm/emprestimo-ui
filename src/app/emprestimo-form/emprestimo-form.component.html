@@ -1,0 +1,64 @@
+<h1>Consultar Empréstimo</h1>
+<h5>Verifique aqui os tipos de empréstimos disponíveis.</h5>
+<div class="container">
+  <form #emprestimoForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-success" role="alert" *ngIf="success == true">
+          Enviado com sucesso!
+        </div>
+        <div class="alert alert-danger" role="alert" *ngFor="let erro of errors">
+          {{erro}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Nome" [(ngModel)]="cliente.nome" name="nome"/>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="CPF" [(ngModel)]="cliente.cpf" name="cpf"/>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="number" class="form-control" placeholder="Idade" maxlength="12" [(ngModel)]="cliente.idade" name="idade"/>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Estado" maxlength="2" [(ngModel)]="cliente.uf" name="uf" />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Salário" [(ngModel)]="cliente.salario" name="salario"/>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" align="center">
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-lg">Consultar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

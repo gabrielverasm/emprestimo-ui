@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+  padding-top: 100px;
+  font-weight: 900;
+}
+div.nome {
+  font-weight: 300;
+  font-size: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+form {
+  padding-top: 60px;
+}
+th {
+  background-color: lightcyan;
+}
+
+td#taxa {
+  text-align: center;
+}
